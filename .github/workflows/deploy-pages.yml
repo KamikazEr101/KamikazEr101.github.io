@@ -4,10 +4,13 @@ on:
   push:
     branches:
       - master
+  repository_dispatch:
+    types:
+      - posts-updated
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -24,6 +27,20 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+
+      - name: Update posts submodule
+        run: |
+          git -C src/posts fetch origin master
+          git -C src/posts checkout --detach origin/master
+          git add src/posts
+          if git diff --cached --quiet -- src/posts; then
+            echo "Posts submodule is already up to date."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "chore: update posts submodule"
+            git push origin master
+          fi
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
