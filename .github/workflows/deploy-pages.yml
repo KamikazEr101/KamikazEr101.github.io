@@ -22,13 +22,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: false
+          submodules: recursive
           fetch-depth: 0
-
-      - name: Checkout posts submodule
-        run: |
-          git config --global url."https://github.com/".insteadOf "git@github.com:"
-          git submodule update --init --recursive
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
