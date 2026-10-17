@@ -1,7 +1,7 @@
-import { sidebar } from "vuepress-theme-hope";
+import { sidebar as createSidebar } from "vuepress-theme-hope";
 
-export const zhSidebar = sidebar({
-  "/zh/": [
+export const sidebar = createSidebar({
+  "/": [
     "",
     {
       text: "如何使用",
