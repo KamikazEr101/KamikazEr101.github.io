@@ -18,7 +18,7 @@ export const zhSidebar = sidebar({
     },
     "intro",
     {
-      text: "幻灯片",
+      text: "幻灯片11",
       icon: "person-chalkboard",
       link: "https://ecosystem.vuejs.press/zh/plugins/markdown/revealjs/demo.html",
     },
