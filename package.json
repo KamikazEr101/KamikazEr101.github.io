@@ -1,0 +1,21 @@
+{
+  "name": "blog website",
+  "description": "kamivory's blog",
+  "version": "2.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "docs:build": "vuepress-vite build src",
+    "docs:clean-dev": "vuepress-vite dev src --clean-cache",
+    "docs:dev": "vuepress-vite dev src",
+    "docs:update-package": "pnpm dlx vp-update"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "2.0.0-rc.31",
+    "sass-embedded": "^1.105.0",
+    "vue": "^3.5.43",
+    "vuepress": "2.0.0-rc.31",
+    "vuepress-theme-hope": "2.0.0-rc.110"
+  },
+  "packageManager": "pnpm@12.14.0"
+}
