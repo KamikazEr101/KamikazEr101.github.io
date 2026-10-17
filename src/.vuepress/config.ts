@@ -8,8 +8,8 @@ export default defineUserConfig({
   locales: {
     "/": {
       lang: "zh-CN",
-      title: "博客演示",
-      description: "vuepress-theme-hope 的博客演示",
+      title: "Ivory的博客",
+      description: "Ivory的博客",
     },
   },
 

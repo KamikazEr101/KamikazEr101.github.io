@@ -2,7 +2,6 @@ import { navbar as createNavbar } from "vuepress-theme-hope";
 
 export const navbar = createNavbar([
   "/",
-  "/demo/",
   {
     text: "博文",
     icon: "pen-to-square",
@@ -43,10 +42,5 @@ export const navbar = createNavbar([
       "tomato",
       "strawberry",
     ],
-  },
-  {
-    text: "V2 文档",
-    icon: "book",
-    link: "https://theme-hope.vuejs.press/zh/",
   },
 ]);
